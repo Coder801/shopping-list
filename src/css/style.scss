@@ -1,0 +1,93 @@
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+$globalPadding: 10px;
+$globalRadius: 4px;
+
+body {
+  background-color: #d6cc00;
+}
+
+.container {
+  overflow: hidden;
+  margin: 30px auto;
+  width: 300px;
+  border-radius: $globalRadius;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  padding: $globalPadding * 2;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.list {
+  margin: 0;
+  padding: $globalPadding;
+  background-color: #e2e2e2;
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  display: block;
+  margin-bottom: $globalPadding;
+  padding: $globalPadding;
+  border-radius: $globalRadius;
+  background-color: white;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+
+.list-item .name {
+  display: block;
+  overflow: hidden;
+  width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-item .count {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25%;
+  font-size: 80%;
+  color: gray;
+  transform: translateY(-50%);
+}
+
+.list-item.is-checked {
+  opacity: 1;
+}
+
+.list-item.is-checked:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  content: '';
+}
+
+.add {
+  padding: 0 $globalPadding $globalPadding;
+}
+
+.add .field {
+  display: block;
+  box-sizing: border-box;
+  padding: $globalPadding / 2 $globalPadding;
+  width: 100%;
+  border: 1px solid;
+  border-radius: $globalRadius;
+}
